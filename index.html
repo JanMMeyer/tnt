@@ -5,8 +5,12 @@
 <body style='margin : 0px; overflow: hidden;'>
 test
 <a-scene embedded arjs='sourceType: webcam;'>
+	<a-assets>
+		<a-asset-item id="tnt" src="tnt.glb" scale="0.1 0.1 0.1"></a-asset-item>
+	</a-assets>
+    
 	<a-marker-camera preset='hiro'>
-		<a-entity obj-model='obj: url(/tnt.obj); mtl: url(/tnt.mtl)'> </a-entity>
+		<a-entity gltf-model="#tnt"></a-entity>
 	</a-marker-camera>
 </a-scene>
 </body>
